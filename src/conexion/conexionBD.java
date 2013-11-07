@@ -24,7 +24,7 @@ boolean resp=false;
 try{
     Class.forName("org.postgresql.Driver").newInstance();
     this.con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/videorent","postgres","sandmankpo");
-    System.out.print("Se conecto a la bd");
+    //System.out.print("Se conecto a la bd");
     resp=true;
     }catch(Exception e){
     //System.out.println("No se puede realizar la conexión");

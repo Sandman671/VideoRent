@@ -33,7 +33,7 @@ public int eliminarusuario(usuarios c)
 
 public int modificarusuario(usuarios c)
 {
-    datos=this.conecta.Modifica("UPDATE usuario SET dni='"+c.getDni()+"', nombre='"+c.getNombre()+"', apellido='"+c.getApellido()+"', turno='"+c.getTurno()+"', rol='"+c.getRol()+"' , usuario='"+c.getUsuario()+"' , usuario='"+c.getPass()+"' WHERE dni='"+c.getDni()+"'");
+    datos=this.conecta.Modifica("UPDATE usuario SET dni='"+c.getDni()+"', nombre='"+c.getNombre()+"', apellido='"+c.getApellido()+"', turno='"+c.getTurno()+"', rol='"+c.getRol()+"' , usuario='"+c.getUsuario()+"' , pass='"+c.getPass()+"' WHERE dni='"+c.getDni()+"'");
     return datos;
 
 }

@@ -21,7 +21,7 @@ public class LoginBD {
 
 public int insertarsesion(login log)
 {
-    datos2=this.conecta.Inserta("INSERT into sesiones (usuario,fecha)values ( '"+log.getUsuario()+"',NOW())");
+    datos2=this.conecta.Inserta("INSERT into sesiones (usuario,fecha)values ( '"+log.getUsuario()+"',CURRENT_TIMESTAMP)");
     return datos2;
 }
 
