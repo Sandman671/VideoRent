@@ -67,7 +67,7 @@ public class Chequeras extends javax.swing.JFrame {
         jTable1.setName("jTable1"); // NOI18N
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setName("Form"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(videorent.VideoRent.class).getContext().getResourceMap(Chequeras.class);

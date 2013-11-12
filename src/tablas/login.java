@@ -44,6 +44,5 @@ public class login {
         this.pass = pass;
     }
 
-    
 
 }

@@ -51,7 +51,8 @@ public class Pelicula extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        
         setName("Form"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(videorent.VideoRent.class).getContext().getResourceMap(Pelicula.class);
@@ -446,7 +447,7 @@ public class Pelicula extends javax.swing.JFrame {
         {
             conexionBD conn= new conexionBD();
             ResultSet rs;
-            MenuprincipalBD us = new MenuprincipalBD();
+            PeliculasBD us = new PeliculasBD();
             rs = us.tablapelicula();
             DefaultTableModel modelo = new DefaultTableModel();
             jTable1.setModel(modelo);

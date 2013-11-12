@@ -7,6 +7,7 @@ package videorent;
 import warnings.*;
 import conexion.MenuprincipalBD;
 import conexion.NuevoclienteBD;
+import conexion.PeliculasBD;
 import conexion.conexionBD;
 import java.sql.ResultSet;
 import javax.swing.table.DefaultTableModel;
@@ -775,7 +776,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             mp.setNombrepelicula(jLabel5.getText());
 
 
-            int tam_cheq = 0;
+            /*int tam_cheq = 0;
             int tam_final;
 
             //**********************************************************Busco la cantidad de peliculas restantes*************************************************************************
@@ -795,20 +796,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
            }*/
 
 
-            tam_final =tam_cheq -1 ;
-            mp.setRestantes(tam_final);
+          /*  tam_final =tam_cheq -1 ;
+            mp.setRestantes(tam_final);*/
 
 
             datos=(gestor.insertaralquiler(mp));
             datos2=(gestor.modificarestadopelicula(mp));
-            datos3=(gestor.modificarrestantes(mp));
+           // datos3=(gestor.modificarrestantes(mp));
 
 
 
 
             //*****************************************************************************************************************************************************************************
 
-            if (datos==1 && datos2==1 && datos3==1)
+            if (datos==1 && datos2==1)//(datos==1 && datos2==1 && datos3==1)
             {
                Exito a = new Exito();
                a.setVisible(true);
@@ -1022,8 +1023,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         {
             conexionBD conn= new conexionBD();
             ResultSet rs;
-            MenuprincipalBD us = new MenuprincipalBD();
-            rs = us.tablapelicula();
+            PeliculasBD us = new PeliculasBD();
+            rs = us.tablapelicula1();
             DefaultTableModel modelo = new DefaultTableModel();
             jTable3.setModel(modelo);
             try

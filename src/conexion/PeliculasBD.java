@@ -46,4 +46,10 @@ public class PeliculasBD {
         return rs;
 }
 
+        public ResultSet tablapelicula1(){
+
+        rs = this.conecta.Consulta("SELECT * FROM peliculas WHERE estado='Disponible'");
+        return rs;
+}        
+
 }

@@ -59,7 +59,7 @@ public class Usuarios extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(videorent.VideoRent.class).getContext().getResourceMap(Usuarios.class);
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("jPanel1.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP)); // NOI18N
@@ -335,20 +335,21 @@ public class Usuarios extends javax.swing.JFrame {
        try
        {
         String a=modelo.getValueAt(r,0).toString();
-            jTextField7.setText(a);//DNI
+            jLabel10.setText(a);//DNI
         String b=modelo.getValueAt(r,1).toString();
-            jTextField1.setText(b);//Nombre
+            jTextField7.setText(b);//Nombre
         String c=modelo.getValueAt(r,2).toString();
-            jTextField2.setText(c);//Apellido
+            jTextField1.setText(c);//Apellido
         String d=modelo.getValueAt(r,3).toString();
-            jTextField3.setText(d);//Turno
+            jTextField2.setText(d);//Turno
         String e=modelo.getValueAt(r,4).toString();
-            jTextField4.setText(e);//Rol
+            jTextField3.setText(e);//Rol
         String f=modelo.getValueAt(r,5).toString();
-            jTextField5.setText(f);//Usuario
+            jTextField4.setText(f);//Usuario
         String g=modelo.getValueAt(r,6).toString();
-            jTextField6.setText(g);//Contraseña
-
+            jTextField5.setText(g);//Contraseña
+        String h=modelo.getValueAt(r,7).toString();
+            jTextField6.setText(h);//Contraseña
 
        }
        catch (Exception e)

@@ -21,7 +21,7 @@ public class MenuprincipalBD {
 
 public int insertaralquiler(menuprincipal mp)
 {
-    datos=this.conecta.Inserta("INSERT into alquileres (id_cliente,nombrecliente,id_pelicula,nombrepelicula,fechaalquiler,fechadevolucion)values ( '"+mp.getId_cliente()+"','"+mp.getNombrecliente()+"','"+mp.getId_pelicula()+"','"+mp.getNombrepelicula()+"',CURDATE(),ADDDATE(CURDATE(), INTERVAL 1 DAY))");
+    datos=this.conecta.Inserta("INSERT into alquileres (id_cliente,nombrecliente,id_pelicula,nombrepelicula,fechaalquiler,fechadevolucion)values ( '"+mp.getId_cliente()+"','"+mp.getNombrecliente()+"','"+mp.getId_pelicula()+"','"+mp.getNombrepelicula()+"',CURRENT_DATE,CURRENT_DATE + INTERVAL '1 DAY')");
     return datos;
 }
 
@@ -58,12 +58,12 @@ public ResultSet tablapelicula(){
 }
 public ResultSet tablanodeudor(){
 
-        rs = this.conecta.Consulta("SELECT * FROM alquileres WHERE (curdate()-fechadevolucion)<=0 AND estado='Si'");
+        rs = this.conecta.Consulta("SELECT * FROM alquileres WHERE (CURRENT_DATE - fechadevolucion)<=0 AND estado='Si'");
         return rs;
 }
 public ResultSet tabladeudor(){
 
-        rs = this.conecta.Consulta("SELECT * FROM alquileres WHERE (curdate()-fechadevolucion)>0 AND estado='Si'");
+        rs = this.conecta.Consulta("SELECT * FROM alquileres WHERE (CURRENT_DATE - fechadevolucion)>0 AND estado='Si'");
         return rs;
 }
 //,fechaalquiler,fechadevolucion
